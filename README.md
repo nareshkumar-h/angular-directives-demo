@@ -11,9 +11,14 @@ There are three kinds of directives in Angular:
  * Attribute directives—change the appearance or behavior of an element, component, or another directive.
 
 #### Structural Directives
-* Structural directives are responsible for HTML layout. 
-* They shape or reshape the DOM's structure, typically by adding, removing, or manipulating elements.
 * e.g: *ngIf, *ngFor
+```
+<div *ngIf="products.length > 0">  
+  <ul *ngFor="let p of products">
+    <li>{{p}}</li>
+  </ul>
+</div>
+```
 
 #### Attribute Directives
 ```
