@@ -1,27 +1,43 @@
-# DirectivesDemo
+## Directives
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.4.
+#### Prerequisite
+* Create a project and import FormsModule 
 
-## Development server
+#### Types of Directives
+* There are three kinds of directives in Angular:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ * Components—directives with a template.
+ * Structural directives—change the DOM layout by adding and removing DOM elements.
+ * Attribute directives—change the appearance or behavior of an element, component, or another directive.
 
-## Code scaffolding
+#### Structural Directives
+* Structural directives are responsible for HTML layout. 
+* They shape or reshape the DOM's structure, typically by adding, removing, or manipulating elements.
+* e.g: *ngIf, *ngFor
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Attribute Directives
+```
+<input type="text" [(ngModel)]="productName" />
+```
 
-## Build
+#### Create a Custom Directive
+```
+ng generate directive highlight
+```
+```
+@Directive({
+  selector: '[appHighlight]'
+})
+export class HighlightDirective {
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  constructor(el: ElementRef) {
+    el.nativeElement.style.backgroundColor = 'yellow';
+ }
 
-## Running unit tests
+}
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### Use Custom Directive
+```
+<p appHighlight>Highlight me!</p>
+```
