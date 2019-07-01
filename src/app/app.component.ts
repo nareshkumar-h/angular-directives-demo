@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'directives-demo';
+
+  productName:string;
+
+  products = ["Lenova", "Dell"];
 }
