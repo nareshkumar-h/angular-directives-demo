@@ -21,6 +21,8 @@ There are three kinds of directives in Angular:
 ```
 
 #### Attribute Directives
+* The ngModel directive, which implements two-way data binding, is an example of an attribute directive. 
+* ngModel modifies the behavior of an existing element (typically <input>) by setting its display value property and responding to change events.
 ```
 <input type="text" [(ngModel)]="productName" />
 ```
