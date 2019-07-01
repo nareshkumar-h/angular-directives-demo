@@ -4,7 +4,7 @@
 * Create a project and import FormsModule 
 
 #### Types of Directives
-* There are three kinds of directives in Angular:
+There are three kinds of directives in Angular:
 
  * Components—directives with a template.
  * Structural directives—change the DOM layout by adding and removing DOM elements.
